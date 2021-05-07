@@ -42,9 +42,9 @@ const fi = (function() {
     }else{
       return a;
     }
-    // 
+    //
     //   for (let i = 0; i < collection.length; i++) {
-    // 
+    //
     //     if (acc === undefined) {
     //       acc = collection[0]
     //       i++
