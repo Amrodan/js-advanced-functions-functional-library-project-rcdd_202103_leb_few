@@ -4,7 +4,7 @@ const fi = (function() {
       return 'Start by reading https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0'
     },
 
-
+ 
 
     each: function (collection, callback) {
       if (Array.isArray(collection)) {
@@ -37,21 +37,21 @@ const fi = (function() {
     reduce: function (collection, callback, acc) {
     let a = collection.reduce((total, date) => total + callback(acc, date), 0)
     let b = collection.reduce((total, date) => total + callback(acc, date))
-    if !(a){
-      return b
-    }else{
-      return a;
+    if !(acc===a){
+      return b;
+    } else {
+      return a
     }
-    //
-    //   for (let i = 0; i < collection.length; i++) {
-    //
-    //     if (acc === undefined) {
-    //       acc = collection[0]
-    //       i++
-    //     }
-    //     acc = callback(acc, collection[i], collection)
-    //   }
-    //   return acc;
+     
+      for (let i = 0; i < collection.length; i++) {
+
+        if (acc === undefined) {
+          acc = collection[0]
+          i++
+        }
+        acc = callback(acc, collection[i], collection)
+      }
+      return acc;
     },
 
 
@@ -72,7 +72,7 @@ const fi = (function() {
       }
       return newArray;
     },
-
+ 
     each: function(collection, alert) {
      let arrayOfValues = (collection instanceof Array) ? collection.slice(): Object.values(collection)
      for(let i = 0; i < arrayOfValues.length; i++){
@@ -80,7 +80,7 @@ const fi = (function() {
      }
      return collection
    },
-
+ 
 
 
     size: function (collection) {
