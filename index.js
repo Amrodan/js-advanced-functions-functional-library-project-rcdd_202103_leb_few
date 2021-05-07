@@ -43,15 +43,15 @@ const fi = (function() {
       return a
     }
 
-      for (let i = 0; i < collection.length; i++) {
-
-        if (acc === undefined) {
-          acc = collection[0]
-          i++
-        }
-        acc = callback(acc, collection[i], collection)
-      }
-      return acc;
+      // for (let i = 0; i < collection.length; i++) {
+      // 
+      //   if (acc === undefined) {
+      //     acc = collection[0]
+      //     i++
+      //   }
+      //   acc = callback(acc, collection[i], collection)
+      // }
+      // return acc;
     },
 
 
